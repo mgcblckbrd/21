@@ -38,9 +38,30 @@ button {
   border-radius: 1px solid #333;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-block-start: 20px;
 }
 
 button img {
-    inline-size: 30px;
-    block-size: 30px;
+  inline-size: 30px;
+  block-size: 30px;
+}
+
+button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #343434;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms;
+}
+
+button:hover::after {
+  opacity: 1;
 }
