@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карточная игра 21 (очко)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main">
+    <h2 class="second-title">Дилер: <span id="dealer-sum">0</span></h2>
+    <div id="dealer-cards">
+      <img
+        id="hidden"
+        class="card-img"
+        src="./img/back.png"
+        alt="карта дилера"
+      />
+    </div>
+    <h2 class="second-title">Игрок: <span id="your-sum"></span></h2>
+    <div id="your-cards" class="card-container"></div>
+    <div class="buttons">
+      <button id="hit" data-tooltip="Взять">
+        <img src="./img/hit.png" alt="icon" />
+      </button>
+      <button id="stay" data-tooltip="Остановиться">
+        <img src="./img/stay.png" alt="Icon" />
+      </button>
+      <button id="restart" style="display: none" data-tooltip="Заново">
+        <img src="./img/restart.png" alt="Icon" />
+      </button>
+    </div>
+    <h2 class="second-title" id="results"></h2>
+    <script src="main.js"></script>
+  </body>
+</html>
